@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "clauson-1972",
+  "title": "An Etymological Dictionary of Pre-Thirteenth-Century Turkish",
+  "author": "Gerard Clauson",
+  "year": 1972,
+  "fileName": "Clauson 1972 - An Etymological Dictionary of Pre-Thirteenth Century Turkish.pdf",
+  "sha256": "96747ebabe58ff67a833e594d0558b7f7053cc66b261ed144c436c669079d02f",
+  "printedPages": [
+    1,
+    11
+  ],
+  "pdfPages": [
+    46,
+    56
+  ],
+  "entryCount": 100,
+  "status": "OCR draft; full text not verified",
+  "countingPolicy": "Every bold lexical headword including cross-references and ghost/error entries; numbered homographs separate; preliminary notes and section headings excluded."
+}

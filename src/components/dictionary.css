@@ -1,0 +1,25 @@
+.sozce-dictionary .search-box { position: relative; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 8px 0; }
+.sozce-dictionary input { width: 300px; max-width: 100%; box-sizing: border-box; }
+.sozce-dictionary .suggestions { flex-basis: 100%; list-style: none; margin: 0; padding: 0; }
+.sozce-dictionary .suggestions li { cursor: pointer; padding: 4px; }
+.sozce-dictionary .suggestions li.active, .sozce-dictionary .suggestions li:hover { background: #eee; }
+.sozce-dictionary .suggestions li span { margin-left: 12px; }
+.sozce-dictionary .search-help { margin: 8px 0 20px; }
+.sozce-dictionary .search-help button { font: inherit; }
+.sozce-dictionary .entry { margin: 24px 0; }
+.sozce-dictionary .entry h2 small { margin-left: 10px; font-size: 14px; font-weight: normal; }
+.sozce-dictionary details { margin: 12px 0; }
+.sozce-dictionary summary { cursor: pointer; }
+.sozce-dictionary .source-status { margin-left: 8px; font-size: 14px; }
+.sozce-dictionary .definition { margin-left: 20px; }
+.sozce-dictionary .example-badge { font-size: 12px; }
+.sozce-dictionary .variants span { margin-left: 8px; }
+
+.sozce-dictionary .definition-text { white-space: pre-wrap; overflow-wrap: anywhere; }
+.sozce-dictionary .ocr-notice { font-size: .85em; color: #633c00; }
+
+.sozce-dictionary .letter-input { position:relative; width:300px; max-width:100%; }
+.sozce-dictionary .letter-input input { font-family:monospace; font-size:14px; padding:6px 8px; width:100%; }
+.sozce-dictionary .letter-input.has-letter-choice { padding-top:27px; }
+.sozce-dictionary .letter-choice { position:absolute; top:0; font:14px monospace; padding:2px 7px; border:1px solid #a2a9b1; background:#fff8d6; border-radius:3px; cursor:pointer; }
+.sozce-dictionary .letter-hint { display:block; font-size:12px; margin-top:4px; color:#54595d; }

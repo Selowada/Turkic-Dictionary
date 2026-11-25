@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clauson Guide</title>
+  <style>
+    :root {
+      color-scheme: light;
+      background: #f8f5ee;
+      color: #262b27;
+      font-family: system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { max-width: 740px; margin: auto; padding: clamp(20px, 4vw, 34px) clamp(24px, 5vw, 48px); }
+    h1 {
+      margin: 0;
+      color: #193d35;
+      font: 500 clamp(30px, 6vw, 44px)/1.12 Georgia, serif;
+      letter-spacing: -.035em;
+    }
+
+    .instructions {
+      max-width: 49ch;
+      margin: 12px 0 24px;
+      color: #4e5750;
+      font-size: .92rem;
+      line-height: 1.55;
+    }
+
+    .entry {
+      margin: 0;
+      padding: clamp(15px, 4vw, 24px);
+      border: 1px solid #ded6c5;
+      border-radius: 4px;
+      background: #fffdf8;
+      font: 1.12rem/1.85 Georgia, "Times New Roman", serif;
+      overflow-wrap: anywhere;
+    }
+
+    .entry p { margin: 0; }
+    .entry cite { font-style: italic; }
+    .entry button {
+      border: 0;
+      border-radius: 3px;
+      padding: .04em .15em;
+      background: #f1e5bc;
+      color: #3a2b11;
+      font: inherit;
+      line-height: 1.2;
+      text-decoration: underline dotted;
+      text-underline-offset: .14em;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .entry button:hover, .entry button[aria-pressed="true"] {
+      background: #dbebe1;
+      color: #173f33;
+    }
+
+    .entry button:focus-visible { outline: 2px solid #276753; outline-offset: 2px; }
+    .entry button[aria-pressed="true"] { box-shadow: inset 0 -2px #276753; }
+    .source { color: #4e5750; font-size: .8rem; margin-bottom: 0; }
+
+    .abbreviations { margin-top: 36px; }
+    .abbreviations h2 { margin: 0; color: #193d35; font: 500 1.65rem/1.2 Georgia, serif; }
+    .index-source { margin: 6px 0 18px; color: #4e5750; font-size: .84rem; }
+    .index-filter { margin-bottom: 14px; }
+    .index-filter label { display: block; margin-bottom: 6px; font-size: .875rem; font-weight: 600; }
+    .index-filter input {
+      width: min(100%, 25rem);
+      padding: 9px 11px;
+      border: 1px solid #a5a294;
+      border-radius: 4px;
+      background: #fffdf8;
+      color: inherit;
+      font: inherit;
+    }
+
+    .index-filter input:focus-visible { outline: 2px solid #276753; outline-offset: 2px; }
+    .index-filter p { min-height: 1.2em; margin: 7px 0 0; color: #4e5750; font-size: .8rem; }
+    .abbreviations table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fffdf8;
+      line-height: 1.45;
+      font-size: .9rem;
+    }
+
+    .abbreviations th, .abbreviations td {
+      padding: 9px clamp(8px, 2vw, 14px);
+      border-bottom: 1px solid #ded6c5;
+      text-align: left;
+      vertical-align: top;
+      overflow-wrap: anywhere;
+    }
+
+    .abbreviations thead th { background: #e6ede5; color: #193d35; }
+    .abbreviations tbody th { width: 30%; }
+
+    .tooltip {
+      --arrow: 50%;
+      position: fixed;
+      z-index: 1;
+      width: min(19rem, calc(100% - 24px));
+      padding: 12px 15px;
+      border-radius: 8px;
+      background: #193d35;
+      color: #fffdf7;
+      box-shadow: 0 8px 20px #193d3533;
+      font-size: .875rem;
+      line-height: 1.5;
+    }
+
+    .tooltip::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: var(--arrow);
+      transform: translateX(-50%);
+      border: 7px solid transparent;
+      border-top-color: #193d35;
+    }
+
+    .tooltip[data-side="below"]::after {
+      top: auto;
+      bottom: 100%;
+      border-top-color: transparent;
+      border-bottom-color: #193d35;
+    }
+
+    .tooltip strong { display: block; margin-bottom: 3px; color: #f9e4a7; font-size: .98rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Clauson Guide</h1>
+    <p class="instructions">Hover over a highlighted term to read its explanation. Click to pin it, then click anywhere else to close it.</p>
+
+    <article class="entry" aria-label="Dictionary entry for 1 avla:-" lang="en">
+      <p><button type="button" data-note="D">D</button>
+        <strong><button type="button" data-note="1">1</button> avla:-</strong>
+        <button type="button" data-note="Den">Den. V.</button> <button type="button" data-note="fr">fr.</button> <strong>a:v</strong>;
+        ‘to hunt (wild game)’; <button type="button" data-note="survives">s.i.a.m.l.g.</button>, with some phonetic changes.
+        <strong><button type="button" data-note="Turku">Türkü</button></strong> <button type="button" data-note="VIII">VIII</button>
+        <strong>av avlasar</strong> ‘when he hunted wild game’ <cite><button type="button" data-note="Ix">Ix.</button></cite> 9:
+        <strong><button type="button" data-note="Uyg">Uyğ.</button></strong> <button type="button" data-note="VIII">VIII</button> <button type="button" data-note="ff">ff.</button> <button type="button" data-note="Bud">Bud.</button>
+        <strong>avlap ölürdi</strong> ‘he hunted and killed’ (innumerable wild animals) <cite><button type="button" data-note="U">U IV</button></cite> 34, 57:
+        <strong><button type="button" data-note="Xak">Xak.</button></strong> <button type="button" data-note="XI">XI</button> <strong>beğ av avla:dı:</strong>
+        ‘the <em>beg</em> hunted wild game’ (<em>ṣāda . . . al-ṣayd</em>) <cite><button type="button" data-note="Kas">Kaş. I</button></cite> 287 (<strong>avla:r, avla:ma:k</strong>):
+        <button type="button" data-note="XIV">XIV</button> <cite><button type="button" data-note="Muh">Muh.</button></cite> <em>işṭāda</em> ‘to hunt’
+        <strong>a:wla:-</strong> <cite><button type="button" data-note="Mel">Mel.</button></cite> 22, 11; <cite><button type="button" data-note="Rif">Rif.</button></cite> 103:
+        <strong><button type="button" data-note="Cag">Çağ.</button></strong> <button type="button" data-note="XV">XV</button> <button type="button" data-note="ff">ff.</button>
+        <strong>awla:-</strong> (spelt) (1) <em>şikār kardan</em> ‘to hunt’ (and (2) <em>mālīdan</em>, in Arabic <em>dalaka</em>, ‘to rub, polish’; hardly to be regarded as a translation of
+        <button type="button" data-note="2">2</button> <strong>avla:-</strong>; inexplicable) <cite><button type="button" data-note="San">San.</button></cite> <button type="button" data-note="recto">52r.</button> 21:
+        <strong><button type="button" data-note="Xwar">Xwar.</button></strong> <button type="button" data-note="XIV">XIV</button> <strong>avla-</strong> ‘to hunt’
+        <cite><button type="button" data-note="Qutb">Qutb</button></cite> 16; <cite><button type="button" data-note="MN">MN</button></cite> 271:
+        <strong><button type="button" data-note="Kip">Kıp.</button></strong> <button type="button" data-note="XIII">XIII</button> <em>işṭāda mina’l-ṣayd</em> <strong>awla:-</strong> <cite><button type="button" data-note="Hou">Hou.</button></cite> 34, 4;
+        <em>ṣāda mina’l-ṣayd</em> <strong>awla:-</strong> (vocalized <strong>u:la:-</strong>) <cite><button type="button" data-note="do">do.</button></cite> 41, 11:
+        <button type="button" data-note="XIV">XIV</button> (<strong>awlu:</strong> ‘hunting grounds’, the verb derived from it is) <strong>awla-</strong> <em>işṭāda</em>
+        <cite><button type="button" data-note="Id">Id.</button></cite> 25: <button type="button" data-note="XV">XV</button> <em>ṣāda</em> <strong>awla-</strong> <cite><button type="button" data-note="Tuh">Tuh.</button></cite> <button type="button" data-note="folioB">22b.</button> 8:
+        <strong><button type="button" data-note="Osm">Osm.</button></strong> <button type="button" data-note="XIV">XIV</button> <strong>avla-</strong> ‘to hunt’ (actually ‘to fish’)
+        <cite><button type="button" data-note="TTS">TTS I</button></cite> 53.
+      </p>
+    </article>
+    <p class="source">Gerard Clauson, 1972, p. 10.</p>
+
+    <section class="abbreviations" aria-labelledby="abbreviations-title">
+      <h2 id="abbreviations-title">Abbreviations and Short Titles</h2>
+      <p class="index-source">Based on Clauson’s list (1972, pp. xxxiii–xxxviii).</p>
+      <div class="index-filter">
+        <label for="abbreviation-search">Filter by abbreviation or meaning</label>
+        <input type="search" id="abbreviation-search" autocomplete="off" spellcheck="false" placeholder="e.g. Xak. or Karakhanid" aria-controls="abbreviation-table">
+        <p id="abbreviation-status" role="status"></p>
+      </div>
+      <table id="abbreviation-table">
+        <thead><tr><th scope="col">Abbreviation</th><th scope="col">Meaning</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">A</th><td>Section code for vowels in groups that do not contain a post-palatal g or k.</td></tr>
+          <tr><th scope="row">ADAW</th><td>Abhandlungen der Deutschen Akademie der Wissenschaften zu Berlin, a publications series cited for early texts.</td></tr>
+          <tr><th scope="row">AKPAW</th><td>The Prussian Academy’s Abhandlungen series, cited under ADAW.</td></tr>
+          <tr><th scope="row">A.N.</th><td>Abstract noun.</td></tr>
+          <tr><th scope="row">APAW</th><td>Academy Abhandlungen series. See ADAW.</td></tr>
+          <tr><th scope="row">a.o.</th><td>Another occurrence.</td></tr>
+          <tr><th scope="row">a.o.o.</th><td>Additional occurrences.</td></tr>
+          <tr><th scope="row">Abl.</th><td>Ablative case.</td></tr>
+          <tr><th scope="row">Acc.</th><td>Accusative case.</td></tr>
+          <tr><th scope="row">acc. to</th><td>According to.</td></tr>
+          <tr><th scope="row">Adj.</th><td>Adjective.</td></tr>
+          <tr><th scope="row">Adv.</th><td>Adverb.</td></tr>
+          <tr><th scope="row">‘Ali</th><td>‘Ali’s Qiṣṣa-i Yūsuf, cited from Brockelmann’s study.</td></tr>
+          <tr><th scope="row">Alt.</th><td>Altay, also called Oyrot or Gorno-Altay. Clauson groups it under NE.</td></tr>
+          <tr><th scope="row">Aor.</th><td>Aorist.</td></tr>
+          <tr><th scope="row">Ar.</th><td>Arabic.</td></tr>
+          <tr><th scope="row">Ash.</th><td>N. I. Ashmarin’s Chuvash dictionary.</td></tr>
+          <tr><th scope="row">At.</th><td>Atebetü’l-Hakāyık, cited from R. R. Arat’s edition.</td></tr>
+          <tr><th scope="row">Aux.</th><td>Auxiliary verb.</td></tr>
+          <tr><th scope="row">Az.</th><td>Azerbaijani (SW).</td></tr>
+          <tr><th scope="row">B</th><td>Section code for labial consonants such as b, p, v, f and w. The letter m has its own code.</td></tr>
+          <tr><th scope="row">BŞ</th><td>Burhan Şehidi’s Uyghur–Chinese–Russian dictionary.</td></tr>
+          <tr><th scope="row">Bad.</th><td>Bedāyiʿü’l-luġat, a Chaghatay–Persian dictionary.</td></tr>
+          <tr><th scope="row">Bar.</th><td>Baraba (NE).</td></tr>
+          <tr><th scope="row">Bas.</th><td>N. A. Baskakov, editor of the Khakas–Russian dictionary cited by Clauson.</td></tr>
+          <tr><th scope="row">Bor.</th><td>A. K. Borovkov’s Uzbek–Russian dictionary.</td></tr>
+          <tr><th scope="row">Brockelmann</th><td>Carl Brockelmann’s Osttürkische Grammatik der islamischen Litteratur-Sprachen Mittelasiens.</td></tr>
+          <tr><th scope="row">Bud.</th><td>Buddhist. Marks a Buddhist text within the Uyghur citations.</td></tr>
+          <tr><th scope="row">Bul.</th><td>Bulġat al-muštāq, a Mamluk-period Arabic–Turkic glossary.</td></tr>
+          <tr><th scope="row">C</th><td>Section code for affricates such as ç, c and j. Before a headword, C marks a compound.</td></tr>
+          <tr><th scope="row">CAJ</th><td>Central Asiatic Journal.</td></tr>
+          <tr><th scope="row">CCG</th><td>Codex Cumanicus, German section.</td></tr>
+          <tr><th scope="row">CCI</th><td>Codex Cumanicus, Italian section.</td></tr>
+          <tr><th scope="row">cf.</th><td>Compare, from Latin confer.</td></tr>
+          <tr><th scope="row">c.i.a.p. (a.l.)</th><td>Common in all periods, with a.l. extending the statement to all languages.</td></tr>
+          <tr><th scope="row">Caf.</th><td>Ahmet Caferoğlu’s Uygur Sözlüğü.</td></tr>
+          <tr><th scope="row">Caus.</th><td>Causative form of a verb.</td></tr>
+          <tr><th scope="row">Chin.–Uyğ. Dict.</th><td>Chinese–Uyghur dictionary of the Ming period.</td></tr>
+          <tr><th scope="row">Chr.</th><td>Christian. Marks Christian Uyghur material.</td></tr>
+          <tr><th scope="row">Chuas.</th><td>Chuastuanift (Xwāstwānīft), a Manichaean confession.</td></tr>
+          <tr><th scope="row">Civ.</th><td>Civil or secular Uyghur texts.</td></tr>
+          <tr><th scope="row">Conc. N.</th><td>Concrete noun, denoting an object.</td></tr>
+          <tr><th scope="row">Co-op.</th><td>Co-operative verb form. See also Recip.</td></tr>
+          <tr><th scope="row">Çağ.</th><td>Chaghatay.</td></tr>
+          <tr><th scope="row">Çuv.</th><td>Chuvash.</td></tr>
+          <tr><th scope="row">D</th><td>Before a headword, marks a derived form. In a section label, D is Clauson’s code for dental stops such as d and t.</td></tr>
+          <tr><th scope="row">Dat.</th><td>Dative case.</td></tr>
+          <tr><th scope="row">Den.</th><td>Denominal, formed from a noun.</td></tr>
+          <tr><th scope="row">Den. V.</th><td>Denominal verb, a verb formed from a noun.</td></tr>
+          <tr><th scope="row">der.</th><td>Derived.</td></tr>
+          <tr><th scope="row">Desid.</th><td>Desiderative verb form, expressing a wish.</td></tr>
+          <tr><th scope="row">Dev.</th><td>Deverbal, formed from a verb.</td></tr>
+          <tr><th scope="row">Dict.</th><td>Dictionary.</td></tr>
+          <tr><th scope="row">Dim.</th><td>Diminutive noun form.</td></tr>
+          <tr><th scope="row">Dis.</th><td>Two-syllable non-verbal entry in the dictionary’s arrangement.</td></tr>
+          <tr><th scope="row">Dis. V.</th><td>Two-syllable verb in the dictionary’s arrangement.</td></tr>
+          <tr><th scope="row">do.</th><td>Ditto. The citation refers to the preceding source.</td></tr>
+          <tr><th scope="row">Doerfer</th><td>Gerhard Doerfer’s Türkische und mongolische Elemente im Neupersischen.</td></tr>
+          <tr><th scope="row">Dru.</th><td>Al-Durra al-muḍiyya, a Mamluk-period Arabic–Kipchak vocabulary.</td></tr>
+          <tr><th scope="row">E</th><td>Before a headword, marks a form Clauson considers erroneous. In a section label, E represents vowels in a group with a post-palatal g or k.</td></tr>
+          <tr><th scope="row">ETY</th><td>Eski Türk Yazıtları, edited by Hüseyin Namık Orkun.</td></tr>
+          <tr><th scope="row">e.g.</th><td>For example, from Latin exempli gratia.</td></tr>
+          <tr><th scope="row">Emph.</th><td>Emphatic verb form.</td></tr>
+          <tr><th scope="row">esp.</th><td>Especially.</td></tr>
+          <tr><th scope="row">etc.</th><td>And so on, from Latin et cetera.</td></tr>
+          <tr><th scope="row">F</th><td>Headword prefix marking a loanword.</td></tr>
+          <tr><th scope="row">f.</th><td>Form.</td></tr>
+          <tr><th scope="row">ff.</th><td>And following, as in the following pages or centuries.</td></tr>
+          <tr><th scope="row">Fam. Arch.</th><td>A late Uyghur family archive, cited by line from the manuscript published by Tikhonov and Tenishev.</td></tr>
+          <tr><th scope="row">fr.</th><td>From. In an etymology, introduces the form the headword is derived from.</td></tr>
+          <tr><th scope="row">Fundamenta</th><td>Philologiae Turcicae Fundamenta, vol. I.</td></tr>
+          <tr><th scope="row">Ğ</th><td>Section code for the velar consonant group.</td></tr>
+          <tr><th scope="row">G</th><td>Section code for the post-palatal consonant group.</td></tr>
+          <tr><th scope="row">Gen.</th><td>Genitive case.</td></tr>
+          <tr><th scope="row">Ger.</th><td>Gerund.</td></tr>
+          <tr><th scope="row">Giles</th><td>Herbert A. Giles’s Chinese–English Dictionary.</td></tr>
+          <tr><th scope="row">Gr.</th><td>Kaare Grønbech’s Komanisches Wörterbuch.</td></tr>
+          <tr><th scope="row">H I, II</th><td>Heilkunde, the two collections of Uyghur medical texts.</td></tr>
+          <tr><th scope="row">Haenisch</th><td>Erich Haenisch’s glossary to the Secret History of the Mongols.</td></tr>
+          <tr><th scope="row">Haltod</th><td>Matthew Haltod and colleagues’ The Mongol–English Practical Dictionary.</td></tr>
+          <tr><th scope="row">Hap. leg.</th><td>Hapax legomenon, a form documented once.</td></tr>
+          <tr><th scope="row">Hend.</th><td>Hendiadys, a pair of expressions used together to convey one idea.</td></tr>
+          <tr><th scope="row">Hou.</th><td>M. Th. Houtsma’s Ein türkisch-arabisches Glossar.</td></tr>
+          <tr><th scope="row">Hüen-ts.</th><td>The Old Uyghur biography of Xuanzang.</td></tr>
+          <tr><th scope="row">I</th><td>Kül Tegin inscription. A side and line may follow the numeral.</td></tr>
+          <tr><th scope="row">II</th><td>Bilge Khagan inscription. A side and line may follow the numeral.</td></tr>
+          <tr><th scope="row">III</th><td>Karabalgasun inscription.</td></tr>
+          <tr><th scope="row">i.e.</th><td>That is, from Latin id est.</td></tr>
+          <tr><th scope="row">Id.</th><td>Abū Ḥayyān’s Kitāb al-Idrāk li-lisān al-Atrāk.</td></tr>
+          <tr><th scope="row">Imperat.</th><td>Imperative mood.</td></tr>
+          <tr><th scope="row">Inf.</th><td>Infinitive.</td></tr>
+          <tr><th scope="row">Instr.</th><td>Instrumental case.</td></tr>
+          <tr><th scope="row">Intrans.</th><td>Intransitive verb.</td></tr>
+          <tr><th scope="row">IrkB</th><td>Irk Bitig, the Old Turkic book of divination. References are by paragraph.</td></tr>
+          <tr><th scope="row">Ix.</th><td>The Küli Çor inscription at Ihe Khüshööt. References are by line.</td></tr>
+          <tr><th scope="row">JRAS</th><td>Journal of the Royal Asiatic Society.</td></tr>
+          <tr><th scope="row">Jarring</th><td>Gunnar Jarring’s An Eastern Turki–English Dialect Dictionary.</td></tr>
+          <tr><th scope="row">KB</th><td>Yusuf Khass Hajib’s Kutadgu Bilig, cited from R. R. Arat’s edition.</td></tr>
+          <tr><th scope="row">KBPP</th><td>Prose preface to Kutadgu Bilig.</td></tr>
+          <tr><th scope="row">KBVP</th><td>Verse preface to Kutadgu Bilig.</td></tr>
+          <tr><th scope="row">Kaç.</th><td>Kacha (NE).</td></tr>
+          <tr><th scope="row">Kar. Krm.</th><td>Crimean Karaim (NW).</td></tr>
+          <tr><th scope="row">Kar. L.</th><td>Lutsk Karaim (NW).</td></tr>
+          <tr><th scope="row">Kar. T.</th><td>Troki Karaim (NW).</td></tr>
+          <tr><th scope="row">Karg.</th><td>Karagas (NE).</td></tr>
+          <tr><th scope="row">Kaş.</th><td>Maḥmūd al-Kāshgharī’s Dīwān Luġāt al-Turk in Besim Atalay’s edition.</td></tr>
+          <tr><th scope="row">Kav.</th><td>Al-Qawānīn al-kulliyya, an Arabic handbook of Turkic.</td></tr>
+          <tr><th scope="row">Kaz.</th><td>Kazan Tatar (NW). See also Tat.</td></tr>
+          <tr><th scope="row">Khak.</th><td>Khakas (NE).</td></tr>
+          <tr><th scope="row">Kıp.</th><td>Kipchak (NW).</td></tr>
+          <tr><th scope="row">Kır.</th><td>Kyrgyz (NC).</td></tr>
+          <tr><th scope="row">Kız.</th><td>Kizil (NE).</td></tr>
+          <tr><th scope="row">Kk.</th><td>Karakalpak (NW).</td></tr>
+          <tr><th scope="row">Koib.</th><td>Koibal (NE).</td></tr>
+          <tr><th scope="row">Kom.</th><td>Koman, also called Cuman (NW).</td></tr>
+          <tr><th scope="row">Kow.</th><td>Tadeusz Kowalski’s Troki Karaim study or Józef E. Kowalewski’s Mongolian dictionary, depending on context.</td></tr>
+          <tr><th scope="row">Krm.</th><td>Crimea. The label may refer to Crimean Karaim or a SW Turkic variety of Crimea, depending on context.</td></tr>
+          <tr><th scope="row">Kuan.</th><td>Kuanşi İm Pusar, an Old Uyghur Buddhist text.</td></tr>
+          <tr><th scope="row">Kum.</th><td>Kumyk (NW).</td></tr>
+          <tr><th scope="row">Kumdı.</th><td>Kumandu (NE).</td></tr>
+          <tr><th scope="row">Küer.</th><td>Küerik (NE).</td></tr>
+          <tr><th scope="row">Kzx.</th><td>Kazakh (NC).</td></tr>
+          <tr><th scope="row">L</th><td>Section code for l.</td></tr>
+          <tr><th scope="row">l.-w.</th><td>Loanword.</td></tr>
+          <tr><th scope="row">Leb.</th><td>Lebed (NE).</td></tr>
+          <tr><th scope="row">Leh.</th><td>Lehçe-i Osmânî.</td></tr>
+          <tr><th scope="row">Ligeti</th><td>Louis Ligeti’s edition of a Ming Chinese–Uyghur vocabulary.</td></tr>
+          <tr><th scope="row">lit.</th><td>Literal or literally.</td></tr>
+          <tr><th scope="row">Loc.</th><td>Locative case.</td></tr>
+          <tr><th scope="row">M</th><td>Section code for m.</td></tr>
+          <tr><th scope="row">M I, II, III</th><td>Manichaica I–III, editions of Manichaean texts.</td></tr>
+          <tr><th scope="row">MM</th><td>The Kazakh–Russian dictionary of I. K. Makhmudov and G. B. Musabaev.</td></tr>
+          <tr><th scope="row">MN</th><td>Khwārazmī’s Muḥabbat-nāma. The following number identifies a verse.</td></tr>
+          <tr><th scope="row">MS., MSS.</th><td>Manuscript and its plural, manuscripts.</td></tr>
+          <tr><th scope="row">Mal.</th><td>Sergei E. Malov’s edition of the Yenisei inscriptions.</td></tr>
+          <tr><th scope="row">Man.</th><td>Manichaean text or dialect.</td></tr>
+          <tr><th scope="row">Man.-A</th><td>Manichaean material in the Uyghur A dialect.</td></tr>
+          <tr><th scope="row">Man.-uığ. Frag.</th><td>Manichäisch-uigurische Fragmente.</td></tr>
+          <tr><th scope="row">Mel.</th><td>P. M. Melioranski’s edition of Ibn Muhannā’s glossary.</td></tr>
+          <tr><th scope="row">metaph.</th><td>Metaphorical or metaphorically.</td></tr>
+          <tr><th scope="row">Mon.</th><td>One-syllable non-verbal entry in the dictionary’s arrangement.</td></tr>
+          <tr><th scope="row">Mon. V.</th><td>One-syllable verb in the dictionary’s arrangement.</td></tr>
+          <tr><th scope="row">Mong.</th><td>Mongolian.</td></tr>
+          <tr><th scope="row">Muh.</th><td>Ibn Muhannā’s Ḥilyat al-insān wa-ḥalbat al-lisān.</td></tr>
+          <tr><th scope="row">N.</th><td>Noun. In a section label, N is the code for nasals in Clauson’s n group.</td></tr>
+          <tr><th scope="row">N./A.</th><td>A form used both as a noun and as an adjective.</td></tr>
+          <tr><th scope="row">N./A.S.</th><td>A noun or adjective denoting a state or situation.</td></tr>
+          <tr><th scope="row">N.Ac.</th><td>Nomen actionis, a noun that names an action.</td></tr>
+          <tr><th scope="row">N.Ag.</th><td>Nomen agentis, a noun that names the person or entity performing an action.</td></tr>
+          <tr><th scope="row">NC</th><td>North-central group of modern Turkic languages.</td></tr>
+          <tr><th scope="row">NE</th><td>North-eastern group of modern Turkic languages.</td></tr>
+          <tr><th scope="row">N.I.</th><td>Nomen instrumenti, a noun that names an instrument or tool.</td></tr>
+          <tr><th scope="row">n.m.e.</th><td>No main entry for the form at the reference given.</td></tr>
+          <tr><th scope="row">n.o.a.b.</th><td>Noted only as below. Attestations are confined to those listed in the entry.</td></tr>
+          <tr><th scope="row">N. of Assn.</th><td>Noun referring to people linked by a shared relationship.</td></tr>
+          <tr><th scope="row">N.S.A.</th><td>Noun denoting a single instance of an action.</td></tr>
+          <tr><th scope="row">NW</th><td>North-western group of modern Turkic languages.</td></tr>
+          <tr><th scope="row">Nahc.</th><td>Nahj al-Farādīs.</td></tr>
+          <tr><th scope="row">Neg.</th><td>Negative form.</td></tr>
+          <tr><th scope="row">Nog.</th><td>Nogay (NW).</td></tr>
+          <tr><th scope="row">O. Kır.</th><td>Old Kyrgyz.</td></tr>
+          <tr><th scope="row">o.o.</th><td>Other occurrences.</td></tr>
+          <tr><th scope="row">Oğ.</th><td>Oğuz Nāme, the Oghuz Khan narrative.</td></tr>
+          <tr><th scope="row">Ongin</th><td>Ongin inscription. References are by line.</td></tr>
+          <tr><th scope="row">Osm.</th><td>Osmanli, Clauson’s label for the Ottoman literary tradition and related material (SW).</td></tr>
+          <tr><th scope="row">P., PP.</th><td>Page and pages. A bare PP as a work title has a separate meaning.</td></tr>
+          <tr><th scope="row">P.N.</th><td>Proper or personal name.</td></tr>
+          <tr><th scope="row">P.N./A.</th><td>Possessive noun or adjective.</td></tr>
+          <tr><th scope="row">PP</th><td>Paul Pelliot’s edition of the Uyghur story of the good and bad princes.</td></tr>
+          <tr><th scope="row">PU</th><td>Headword prefix marking uncertain pronunciation, including an uncertain consonant.</td></tr>
+          <tr><th scope="row">Pal.</th><td>A. A. Pal’mbakh’s Tuvan–Russian dictionary.</td></tr>
+          <tr><th scope="row">para., paras.</th><td>Paragraph and paragraphs, typically within the preface.</td></tr>
+          <tr><th scope="row">Particip.</th><td>Participle.</td></tr>
+          <tr><th scope="row">Pass.</th><td>Passive verb form.</td></tr>
+          <tr><th scope="row">Pe.</th><td>Persian.</td></tr>
+          <tr><th scope="row">pec. to</th><td>Peculiar to, or found only in the specified language or source.</td></tr>
+          <tr><th scope="row">Pek.</th><td>E. K. Pekarsky’s Yakut dictionary.</td></tr>
+          <tr><th scope="row">Perf.</th><td>Perfect tense.</td></tr>
+          <tr><th scope="row">Pfahl.</th><td>F. W. K. Müller’s edition of two Old Uyghur inscriptions on wooden stakes.</td></tr>
+          <tr><th scope="row">phr.</th><td>Phrase.</td></tr>
+          <tr><th scope="row">Pres.</th><td>Present tense.</td></tr>
+          <tr><th scope="row">Priv. N./A.</th><td>Privative noun or adjective, expressing the absence of something.</td></tr>
+          <tr><th scope="row">prob.</th><td>Probably.</td></tr>
+          <tr><th scope="row">prov.</th><td>A proverb is cited.</td></tr>
+          <tr><th scope="row">q.v.</th><td>See the referenced word or entry, from Latin quod vide.</td></tr>
+          <tr><th scope="row">quotn., quotns.</th><td>Quotation and quotations.</td></tr>
+          <tr><th scope="row">Qutb</th><td>Quṭb’s Khusraw u Shīrīn, cited by page in Zajączkowski’s index.</td></tr>
+          <tr><th scope="row">R</th><td>W. Radloff’s Versuch eines Wörterbuches der Türk-Dialecte. In a section label, R represents r.</td></tr>
+          <tr><th scope="row">Rbğ.</th><td>Rabghūzī, author of Qiṣaṣ al-anbiyāʾ.</td></tr>
+          <tr><th scope="row">r. (folio)</th><td>Recto, the front side of a manuscript leaf. The older folio notation a and b marks the first and second sides.</td></tr>
+          <tr><th scope="row">Recip.</th><td>Reciprocal verb form, sharing its morphology with the co-operative.</td></tr>
+          <tr><th scope="row">Red.</th><td>James W. Redhouse’s A Turkish and English Lexicon.</td></tr>
+          <tr><th scope="row">refce., refces.</th><td>Reference and references.</td></tr>
+          <tr><th scope="row">Refl.</th><td>Reflexive verb form.</td></tr>
+          <tr><th scope="row">Rep. Turkish</th><td>Republican Turkish, the modern Turkish of Turkey.</td></tr>
+          <tr><th scope="row">Rif.</th><td>Kilisli Rifʿat’s edition of Ibn Muhannā’s glossary.</td></tr>
+          <tr><th scope="row">S</th><td>Before a headword, marks a secondary form. In a section label, S represents s.</td></tr>
+          <tr><th scope="row">SC</th><td>South-central group of modern Turkic languages.</td></tr>
+          <tr><th scope="row">SDD</th><td>Söz Derleme Dergisi, a collection of words from Anatolian dialects.</td></tr>
+          <tr><th scope="row">SE</th><td>South-eastern group of modern Turkic languages.</td></tr>
+          <tr><th scope="row">SH</th><td>Secret History of the Mongols.</td></tr>
+          <tr><th scope="row">s.i.a.m.l.(g.)</th><td>Recorded across all modern languages or language groups. The example spells the entire form s.i.a.m.l.g.</td></tr>
+          <tr><th scope="row">s.i.m.m.l.(g.)</th><td>Recorded across most modern languages or language groups.</td></tr>
+          <tr><th scope="row">SKPAW</th><td>Sitzungsberichte der Königlich Preussischen Akademie der Wissenschaften.</td></tr>
+          <tr><th scope="row">s.o.i.</th><td>Survives only in the named language or group.</td></tr>
+          <tr><th scope="row">SPAW</th><td>Sitzungsberichte der Preussischen Akademie der Wissenschaften. See SKPAW.</td></tr>
+          <tr><th scope="row">s.v.</th><td>Under the headword named, from Latin sub voce.</td></tr>
+          <tr><th scope="row">SW</th><td>South-western group of modern Turkic languages.</td></tr>
+          <tr><th scope="row">Sag.</th><td>Sagay (NE).</td></tr>
+          <tr><th scope="row">Sami</th><td>Şemseddin Sami’s Kāmûs-ı Türkî.</td></tr>
+          <tr><th scope="row">San.</th><td>Sanglāx, Muḥammad Mahdī Khān’s Chaghatay–Persian dictionary.</td></tr>
+          <tr><th scope="row">Sang Yuğ.</th><td>Sang Yugur (Western Yugur, SE).</td></tr>
+          <tr><th scope="row">Sec.</th><td>Secondary form.</td></tr>
+          <tr><th scope="row">Shaw</th><td>Robert B. Shaw’s A Sketch of the Turki Language.</td></tr>
+          <tr><th scope="row">Shcherbak</th><td>A. M. Shcherbak’s study of animal names in Turkic.</td></tr>
+          <tr><th scope="row">Shnit.</th><td>Boris N. Shnitnikov’s Kazakh–English Dictionary.</td></tr>
+          <tr><th scope="row">sic</th><td>So in the source. The spelling or reading is reproduced as found.</td></tr>
+          <tr><th scope="row">Studies</th><td>Gerard Clauson’s Turkish and Mongolian Studies.</td></tr>
+          <tr><th scope="row">Suci</th><td>The Suci inscription.</td></tr>
+          <tr><th scope="row">Suff.</th><td>Suffix.</td></tr>
+          <tr><th scope="row">Suv.</th><td>Suvarṇaprabhāsa Sūtra, also known in Uyghur as Altun Yaruk.</td></tr>
+          <tr><th scope="row">syn. w.</th><td>Synonymous with.</td></tr>
+          <tr><th scope="row">Ş</th><td>Section code for ş.</td></tr>
+          <tr><th scope="row">ŞS</th><td>Şeyh Süleyman’s Chaghatay–Ottoman Turkish dictionary.</td></tr>
+          <tr><th scope="row">Şor</th><td>Shor (NE).</td></tr>
+          <tr><th scope="row">Şu.</th><td>The Shine Usu inscription.</td></tr>
+          <tr><th scope="row">T</th><td>The Tonyukuk inscription. References are by line.</td></tr>
+          <tr><th scope="row">TM IV</th><td>Türkiyat Mecmuası, volume IV.</td></tr>
+          <tr><th scope="row">TT</th><td>Türkische Turfan-Texte, a series of Old Turkic text editions.</td></tr>
+          <tr><th scope="row">TTS</th><td>Tanıklarıyla Tarama Sözlüğü, cited by volume and page.</td></tr>
+          <tr><th scope="row">Talas</th><td>Inscriptions from the Talas River area.</td></tr>
+          <tr><th scope="row">Tar.</th><td>Taranqi (SE).</td></tr>
+          <tr><th scope="row">Tara</th><td>Tara (NE).</td></tr>
+          <tr><th scope="row">Tat.</th><td>Tatar, usually Kazan Tatar (NW).</td></tr>
+          <tr><th scope="row">Tef.</th><td>The Central Asian Qur’an commentary cited from A. K. Borovkov’s study.</td></tr>
+          <tr><th scope="row">Tel.</th><td>Teleut (NE).</td></tr>
+          <tr><th scope="row">Tiş.</th><td>Tišastvustik, an Old Uyghur Buddhist text.</td></tr>
+          <tr><th scope="row">Tkm.</th><td>Turkmen (SW).</td></tr>
+          <tr><th scope="row">Tob.</th><td>Tobol (NE).</td></tr>
+          <tr><th scope="row">Trans.</th><td>Transitive verb.</td></tr>
+          <tr><th scope="row">Tris.</th><td>Non-verbal entry of three or more syllables.</td></tr>
+          <tr><th scope="row">Tris. V.</th><td>Verb of three or more syllables.</td></tr>
+          <tr><th scope="row">Tub.</th><td>Tuba (NE).</td></tr>
+          <tr><th scope="row">Tuh.</th><td>Al-Tuḥfa al-zakiyya, an Arabic–Turkic glossary cited from Besim Atalay’s facsimile.</td></tr>
+          <tr><th scope="row">Türki</th><td>Turki, Clauson’s label for eastern Turkic varieties grouped under SE.</td></tr>
+          <tr><th scope="row">Türkü</th><td>Clauson’s label for early Turkic inscriptional and related texts.</td></tr>
+          <tr><th scope="row">Tuv.</th><td>Tuvan (NE).</td></tr>
+          <tr><th scope="row">U I, etc.</th><td>Uigurica, cited by volume and then by location within the volume.</td></tr>
+          <tr><th scope="row">USp.</th><td>Uigurische Sprachdenkmäler.</td></tr>
+          <tr><th scope="row">Uyğ.</th><td>Uyghur. In the early citations, this usually means Old Uyghur.</td></tr>
+          <tr><th scope="row">Uyğ.-A</th><td>Uyghur A dialect.</td></tr>
+          <tr><th scope="row">Uzb.</th><td>Uzbek (SC).</td></tr>
+          <tr><th scope="row">V. / v.</th><td>Verb.</td></tr>
+          <tr><th scope="row">v. (vide)</th><td>See, from Latin vide.</td></tr>
+          <tr><th scope="row">v. G. ATG</th><td>Annemarie von Gabain’s Alttürkische Grammatik.</td></tr>
+          <tr><th scope="row">v.l.</th><td>Variant reading, from Latin varia lectio.</td></tr>
+          <tr><th scope="row">VU</th><td>Headword prefix marking uncertain vowels when the consonants are clear.</td></tr>
+          <tr><th scope="row">VIII, etc.</th><td>A numbered century CE when used after a language label. VIII means the eighth century.</td></tr>
+          <tr><th scope="row">Vam.</th><td>Ármin Vámbéry’s Ćagataische Sprachstudien.</td></tr>
+          <tr><th scope="row">Vel.</th><td>V. de Véliaminof-Zernof’s edition of the Abuşka dictionary.</td></tr>
+          <tr><th scope="row">w.</th><td>With.</td></tr>
+          <tr><th scope="row">Wind.</th><td>W. Bang and A. von Gabain’s edition of an Uyghur fragment about the Manichaean wind god.</td></tr>
+          <tr><th scope="row">XI, etc.</th><td>A numbered century CE when used after a language label. XI means the eleventh century.</td></tr>
+          <tr><th scope="row">Xak.</th><td>Xakani, Clauson’s label for Karakhanid Turkic.</td></tr>
+          <tr><th scope="row">Xwar.</th><td>Khwarazmian Turkic.</td></tr>
+          <tr><th scope="row">Y</th><td>Section code for y.</td></tr>
+          <tr><th scope="row">Yen.</th><td>The Yenisei inscriptions.</td></tr>
+          <tr><th scope="row">Yud.</th><td>K. K. Yudakhin’s Kyrgyz–Russian dictionary.</td></tr>
+          <tr><th scope="row">Z</th><td>Section code for z.</td></tr>
+          <tr><th scope="row">Zaj.</th><td>Ananiasz Zajączkowski.</td></tr>
+          <tr><th scope="row">Zam.</th><td>Al-Zamakhsharī’s Muqaddimat al-Adab and its Turkic glosses.</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <aside class="tooltip" id="guide-tooltip" role="tooltip" hidden>
+    <strong id="note-title"></strong>
+    <span id="note-text"></span>
+  </aside>
+
+  <script>
+    const notes = {
+      "D": ["Derived form", "At the start of an entry, D marks a word formed from another word. Here the base is the noun a:v, ‘wild game’."],
+      "1": ["First homograph", "Clauson numbers separate entries with the same spelling. 1 avla:- means ‘to hunt’. 2 avla:- means ‘to surround’."],
+      "2": ["Cross-reference to the second homograph", "The number points to the separate entry 2 avla:-, ‘to surround’."],
+      "Den": ["Denominal verb", "Den. means ‘denominal’ and V. means ‘verb’. Clauson derives avla:- from the noun a:v."],
+      "fr": ["From", "Introduces the form from which the headword is derived."],
+      "survives": ["Survival across modern language groups", "Clauson reports that the word survives in all modern Turkic language groups."],
+      "Turku": ["Türkü", "Clauson’s label for the language of the early Turkic inscriptions and related texts."],
+      "VIII": ["8th century", "A Roman numeral after a language label dates the cited evidence to that century."],
+      "XI": ["11th century", "Here the numeral dates the Karakhanid evidence."],
+      "XIII": ["13th century", "The dictionary lists Hou. under the 13th century. In preface §49, Clauson reports that the manuscript is dated 1343."],
+      "XIV": ["14th century", "The numeral dates the evidence cited for the preceding language or source."],
+      "XV": ["15th century", "The numeral dates the evidence cited for the preceding language or source."],
+      "ff": ["And following", "After a century, this extends the citation to the period that follows it."],
+      "Ix": ["Küli Çor inscription", "Ix. 9 refers to line 9 of the inscription at Ihe Khüshööt."],
+      "U": ["Uigurica, volume IV", "The numbers 34 and 57 identify the page and line, respectively."],
+      "Uyg": ["Uyghur", "The label introduces evidence from Old Uyghur texts."],
+      "Bud": ["Buddhist", "The Uyghur example comes from a Buddhist text."],
+      "Xak": ["Xakani", "Clauson’s label for Karakhanid literary Turkic."],
+      "Kas": ["Maḥmūd al-Kāshgharī", "Kaş. I 287 is volume I, page 287 of Besim Atalay’s edition of the Dīwān Luġāt al-Turk."],
+      "Muh": ["Ibn Muhannā", "Clauson cites two editions of Ibn Muhannā’s glossary, Ḥilyat al-insān wa-ḥalbat al-lisān."],
+      "Mel": ["Melioranski’s edition", "A reference to Melioranski’s edition of Ibn Muhannā’s glossary. 22, 11 identifies the page and line."],
+      "Rif": ["Kilisli Rifʿat’s edition", "A reference to Kilisli Rifʿat’s edition of Ibn Muhannā’s glossary. 103 is the page number here."],
+      "Cag": ["Chaghatay", "Introduces examples from Chaghatay sources."],
+      "San": ["Sanglāx", "Muḥammad Mahdī Khān’s Chaghatay–Persian dictionary. 52r. 21 is line 21 on the front of folio 52 in the facsimile."],
+      "recto": ["Recto", "The front of the leaf. Here 52r. means the front of folio 52."],
+      "Xwar": ["Khwarazmian Turkic", "Clauson’s label for the literary language of the sources grouped here."],
+      "Qutb": ["Quṭb’s Khusraw u Shīrīn", "16 points to a page in Zajączkowski’s index to the poem."],
+      "MN": ["Khwārazmī’s Muḥabbat-nāma", "271 is the verse number."],
+      "Kip": ["Kipchak", "These examples come from glossaries Clauson cites under Kipchak."],
+      "Hou": ["Houtsma’s glossary", "In Ein türkisch-arabisches Glossar, 34, 4 refers to page 34, line 4 of the Arabic text."],
+      "do": ["Ditto", "Refers to the preceding source. Here, read it as Hou. 41, 11."],
+      "Id": ["Kitāb al-Idrāk", "Abū Ḥayyān’s Kitāb al-Idrāk li-lisān al-Atrāk. 25 is the page number in the Arabic text."],
+      "Tuh": ["Al-Tuḥfa al-zakiyya", "An Arabic–Turkic glossary. 22b. 8 gives the leaf and line in the facsimile used by Clauson."],
+      "folioB": ["Back of the folio", "22b. identifies the second side of folio 22. The following 8 is the line number."],
+      "Osm": ["Osmanli", "Clauson’s label for Ottoman Turkish and its early literary tradition."],
+      "TTS": ["Tanıklarıyla Tarama Sözlüğü", "TTS I 53 is a reference to volume I, page 53."],
+    };
+
+    const abbreviationSearch = document.querySelector('#abbreviation-search');
+    const abbreviationStatus = document.querySelector('#abbreviation-status');
+
+    function normalizeAbbreviation(text) {
+      return text.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '').replace(/ı/g, 'i');
+    }
+
+    const abbreviationRows = Array.from(document.querySelectorAll('#abbreviation-table tbody tr'), row => ({
+      row,
+      searchable: normalizeAbbreviation(row.textContent),
+      compactKey: normalizeAbbreviation(row.cells[0].textContent).replace(/[^a-z0-9]/g, ''),
+    }));
+
+    function filterAbbreviations() {
+      const query = normalizeAbbreviation(abbreviationSearch.value.trim());
+      const compactQuery = query.replace(/[^a-z0-9]/g, '');
+      let count = 0;
+      for (const { row, searchable, compactKey } of abbreviationRows) {
+        row.hidden = !searchable.includes(query) && !(compactQuery && compactKey.includes(compactQuery));
+        if (!row.hidden) count++;
+      }
+      abbreviationStatus.textContent = query
+        ? (count ? count + (count === 1 ? ' match' : ' matches') : 'No matching abbreviations.')
+        : count + ' abbreviations and short titles';
+    }
+
+    abbreviationSearch.addEventListener('input', filterAbbreviations);
+    filterAbbreviations();
+
+    const bubble = document.querySelector('#guide-tooltip');
+    const title = document.querySelector('#note-title');
+    const description = document.querySelector('#note-text');
+    let active = null;
+    let pinned = null;
+    let hideTimer;
+
+    function positionBubble() {
+      if (!active) return;
+      const anchor = active.getBoundingClientRect();
+      const width = bubble.offsetWidth;
+      const height = bubble.offsetHeight;
+      const center = anchor.left + anchor.width / 2;
+      const left = Math.max(12, Math.min(center - width / 2, document.documentElement.clientWidth - width - 12));
+      const above = anchor.top >= height + 20;
+      const top = above ? anchor.top - height - 9 : anchor.bottom + 9;
+      bubble.style.left = left + 'px';
+      bubble.style.top = Math.max(8, Math.min(top, window.innerHeight - height - 8)) + 'px';
+      bubble.style.setProperty('--arrow', Math.max(12, Math.min(center - left, width - 12)) + 'px');
+      bubble.dataset.side = above ? 'above' : 'below';
+      bubble.style.visibility = anchor.bottom <= 0 || anchor.top >= window.innerHeight ? 'hidden' : '';
+    }
+
+    function dismiss() {
+      clearTimeout(hideTimer);
+      active?.removeAttribute('aria-describedby');
+      pinned?.setAttribute('aria-pressed', 'false');
+      bubble.hidden = true;
+      active = null;
+      pinned = null;
+    }
+
+    function show(button) {
+      clearTimeout(hideTimer);
+      active?.removeAttribute('aria-describedby');
+      active = button;
+      [title.textContent, description.textContent] = notes[button.dataset.note];
+      button.setAttribute('aria-describedby', bubble.id);
+      bubble.hidden = false;
+      positionBubble();
+    }
+
+    function queueHide() {
+      clearTimeout(hideTimer);
+      if (!pinned) hideTimer = setTimeout(dismiss, 150);
+    }
+
+    for (const button of document.querySelectorAll('[data-note]')) {
+      button.setAttribute('aria-pressed', 'false');
+      button.addEventListener('pointerenter', event => {
+        if (!pinned && event.pointerType !== 'touch') show(button);
+      });
+      button.addEventListener('pointerleave', () => {
+        if (active === button && !button.matches(':focus-visible')) queueHide();
+      });
+      button.addEventListener('focus', () => {
+        if (!pinned && button.matches(':focus-visible')) show(button);
+      });
+      button.addEventListener('blur', () => {
+        if (!pinned && active === button) queueHide();
+      });
+      button.addEventListener('click', () => {
+        pinned?.setAttribute('aria-pressed', 'false');
+        pinned = button;
+        button.setAttribute('aria-pressed', 'true');
+        show(button);
+      });
+    }
+
+    bubble.addEventListener('pointerenter', () => clearTimeout(hideTimer));
+    bubble.addEventListener('pointerleave', queueHide);
+    document.addEventListener('click', event => {
+      if (!event.target.closest('[data-note], #guide-tooltip')) dismiss();
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') dismiss();
+    });
+    window.addEventListener('resize', positionBubble);
+    window.addEventListener('scroll', positionBubble, { passive: true });
+    window.addEventListener('message', event => {
+      if (event.source === window.parent && event.origin === location.origin &&
+          event.data === 'clauson-guide:dismiss') dismiss();
+    });
+  </script>
+</body>
+</html>

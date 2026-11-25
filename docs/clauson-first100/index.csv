@@ -1,0 +1,101 @@
+sequence,id,source_headword,printed_pages,status
+1,clauson-1972-0001,a:,"Clauson (1972), p. 1",needs-review
+2,clauson-1972-0002,1 ı:,"Clauson (1972), p. 1",needs-review
+3,clauson-1972-0003,2 ı:,"Clauson (1972), p. 1",needs-review
+4,clauson-1972-0004,3 ı:,"Clauson (1972), p. 1",needs-review
+5,clauson-1972-0005,1 o:,"Clauson (1972), p. 1",needs-review
+6,clauson-1972-0006,2 o:,"Clauson (1972), p. 1",needs-review
+7,clauson-1972-0007,3 o:,"Clauson (1972), p. 1",needs-review
+8,clauson-1972-0008,1 u:,"Clauson (1972), p. 2",needs-review
+9,clauson-1972-0009,2 u:,"Clauson (1972), p. 2",needs-review
+10,clauson-1972-0010,u:-,"Clauson (1972), p. 2",needs-review
+11,clauson-1972-0011,ö:-,"Clauson (1972), pp. 2–3",needs-review
+12,clauson-1972-0012,"1 ap/ep, etc.","Clauson (1972), p. 3",needs-review
+13,clauson-1972-0013,2 ap,"Clauson (1972), p. 3",needs-review
+14,clauson-1972-0014,a:v,"Clauson (1972), p. 3",needs-review
+15,clauson-1972-0015,ep,"Clauson (1972), p. 3",needs-review
+16,clauson-1972-0016,e:v,"Clauson (1972), pp. 3–4",needs-review
+17,clauson-1972-0017,ip,"Clauson (1972), p. 4",needs-review
+18,clauson-1972-0018,o:b o:b,"Clauson (1972), p. 4",needs-review
+19,clauson-1972-0019,1 op,"Clauson (1972), p. 4",needs-review
+20,clauson-1972-0020,2 op,"Clauson (1972), p. 4",needs-review
+21,clauson-1972-0021,up/1 üp,"Clauson (1972), p. 4",needs-review
+22,clauson-1972-0022,*2 üp,"Clauson (1972), p. 4",needs-review
+23,clauson-1972-0023,ab-,"Clauson (1972), p. 4",needs-review
+24,clauson-1972-0024,a:v-,"Clauson (1972), p. 4",needs-review
+25,clauson-1972-0025,é:v-,"Clauson (1972), p. 4",needs-review
+26,clauson-1972-0026,o:p-,"Clauson (1972), p. 4",needs-review
+27,clauson-1972-0027,uv-,"Clauson (1972), pp. 4–5",needs-review
+28,clauson-1972-0028,1 öp-,"Clauson (1972), p. 5",needs-review
+29,clauson-1972-0029,2 öp-,"Clauson (1972), p. 5",needs-review
+30,clauson-1972-0030,aba:/1 apa:/ebe:/epe:,"Clauson (1972), p. 5",needs-review
+31,clauson-1972-0031,2 apa:,"Clauson (1972), p. 5",needs-review
+32,clauson-1972-0032,ava:,"Clauson (1972), p. 5",needs-review
+33,clauson-1972-0033,oba:,"Clauson (1972), pp. 5–6",needs-review
+34,clauson-1972-0034,uva:,"Clauson (1972), p. 6",needs-review
+35,clauson-1972-0035,opo:,"Clauson (1972), p. 6",needs-review
+36,clauson-1972-0036,abı:-,"Clauson (1972), p. 6",needs-review
+37,clauson-1972-0037,*avı:-,"Clauson (1972), p. 6",needs-review
+38,clauson-1972-0038,üpüp,"Clauson (1972), p. 6",needs-review
+39,clauson-1972-0039,avuç,"Clauson (1972), p. 6",needs-review
+40,clauson-1972-0040,avçı:,"Clauson (1972), p. 6",needs-review
+41,clauson-1972-0041,evçi:,"Clauson (1972), p. 6",needs-review
+42,clauson-1972-0042,aba:çı:,"Clauson (1972), p. 6",needs-review
+43,clauson-1972-0043,avıçğa:,"Clauson (1972), p. 6",needs-review
+44,clauson-1972-0044,avujğu:n,"Clauson (1972), p. 6",needs-review
+45,clauson-1972-0045,awut,"Clauson (1972), p. 6",needs-review
+46,clauson-1972-0046,1 evet,"Clauson (1972), p. 6",needs-review
+47,clauson-1972-0047,2 é:vet,"Clauson (1972), p. 6",needs-review
+48,clauson-1972-0048,uvut,"Clauson (1972), pp. 6–7",needs-review
+49,clauson-1972-0049,abıt-,"Clauson (1972), p. 7",needs-review
+50,clauson-1972-0050,avıt-,"Clauson (1972), p. 7",needs-review
+51,clauson-1972-0051,evdi:-,"Clauson (1972), p. 7",needs-review
+52,clauson-1972-0052,evdil-,"Clauson (1972), p. 7",needs-review
+53,clauson-1972-0053,evdin-,"Clauson (1972), p. 7",needs-review
+54,clauson-1972-0054,uvtan-,"Clauson (1972), p. 7",needs-review
+55,clauson-1972-0055,öptür-,"Clauson (1972), p. 7",needs-review
+56,clauson-1972-0056,evdindi:,"Clauson (1972), p. 7",needs-review
+57,clauson-1972-0057,uvutluğ,"Clauson (1972), p. 8",needs-review
+58,clauson-1972-0058,uvutsuz,"Clauson (1972), p. 8",needs-review
+59,clauson-1972-0059,uvutsuzluk,"Clauson (1972), p. 8",needs-review
+60,clauson-1972-0060,uvutğar-,"Clauson (1972), p. 8",needs-review
+61,clauson-1972-0061,uvutlan-,"Clauson (1972), p. 8",needs-review
+62,clauson-1972-0062,aba:k,"Clauson (1972), p. 8",needs-review
+63,clauson-1972-0063,avağ,"Clauson (1972), p. 8",needs-review
+64,clauson-1972-0064,ıvık,"Clauson (1972), p. 8",needs-review
+65,clauson-1972-0065,uvak,"Clauson (1972), p. 8",needs-review
+66,clauson-1972-0066,aba:kı:,"Clauson (1972), p. 8",needs-review
+67,clauson-1972-0067,epek,"Clauson (1972), p. 8",needs-review
+68,clauson-1972-0068,é:vek,"Clauson (1972), pp. 8–9",needs-review
+69,clauson-1972-0069,ibik/übük,"Clauson (1972), p. 9",needs-review
+70,clauson-1972-0070,öpke:,"Clauson (1972), p. 9",needs-review
+71,clauson-1972-0071,üpgük,"Clauson (1972), p. 9",needs-review
+72,clauson-1972-0072,ipgin,"Clauson (1972), p. 9",needs-review
+73,clauson-1972-0073,evük-,"Clauson (1972), p. 9",needs-review
+74,clauson-1972-0074,ebegü,"Clauson (1972), p. 9",needs-review
+75,clauson-1972-0075,öpkeçi:,"Clauson (1972), p. 9",needs-review
+76,clauson-1972-0076,éveklik,"Clauson (1972), p. 9",needs-review
+77,clauson-1972-0077,öpkelig,"Clauson (1972), p. 9",needs-review
+78,clauson-1972-0078,öpkele:-,"Clauson (1972), p. 9",needs-review
+79,clauson-1972-0079,öpügse-,"Clauson (1972), pp. 9–10",needs-review
+80,clauson-1972-0080,evlig,"Clauson (1972), p. 10",needs-review
+81,clauson-1972-0081,abla:n,"Clauson (1972), p. 10",needs-review
+82,clauson-1972-0082,é:vil-,"Clauson (1972), p. 10",needs-review
+83,clauson-1972-0083,opul-,"Clauson (1972), p. 10",needs-review
+84,clauson-1972-0084,uvul-,"Clauson (1972), p. 10",needs-review
+85,clauson-1972-0085,öpel-,"Clauson (1972), p. 10",needs-review
+86,clauson-1972-0086,öpül-,"Clauson (1972), p. 10",needs-review
+87,clauson-1972-0087,1 avla:-,"Clauson (1972), p. 10",needs-review
+88,clauson-1972-0088,2 avla:-,"Clauson (1972), p. 10",needs-review
+89,clauson-1972-0089,evle:-,"Clauson (1972), pp. 10–11",needs-review
+90,clauson-1972-0090,opla:-,"Clauson (1972), p. 11",needs-review
+91,clauson-1972-0091,üple:-,"Clauson (1972), p. 11",needs-review
+92,clauson-1972-0092,avlat-,"Clauson (1972), p. 11",needs-review
+93,clauson-1972-0093,üplet-,"Clauson (1972), p. 11",needs-review
+94,clauson-1972-0094,avlan-,"Clauson (1972), p. 11",needs-review
+95,clauson-1972-0095,evlen-,"Clauson (1972), p. 11",needs-review
+96,clauson-1972-0096,avlaş-,"Clauson (1972), p. 11",needs-review
+97,clauson-1972-0097,evleş-,"Clauson (1972), p. 11",needs-review
+98,clauson-1972-0098,üpleş-,"Clauson (1972), p. 11",needs-review
+99,clauson-1972-0099,aba:lı:,"Clauson (1972), p. 11",needs-review
+100,clauson-1972-0100,avılku:,"Clauson (1972), p. 11",needs-review

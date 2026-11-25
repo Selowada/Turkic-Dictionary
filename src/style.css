@@ -1,0 +1,20 @@
+:root { font-family: Arial, sans-serif; color: #202122; background: #fff; }
+body { margin: 0; }
+.dictionary-app { max-width: 850px; margin: 32px auto; padding: 0 20px 60px; }
+h1 { font: 30px Georgia, serif; margin-bottom: 6px; }
+header p { color: #555; }
+nav { display: flex; flex-wrap: wrap; gap: 8px; border-bottom: 1px solid #ccc; padding-bottom: 12px; margin-bottom: 22px; }
+button,input,select,textarea { font: inherit; }
+button { cursor:pointer; padding: 5px 9px; }
+button[aria-pressed="true"] { font-weight: bold; background: #eee; }
+input,textarea,select { padding: 6px; max-width:100%; box-sizing:border-box; }
+textarea { width:100%; min-height:180px; line-height:1.5; }
+fieldset { margin:16px 0; border:1px solid #aaa; }
+fieldset input { width:100%; }
+.definition-text { line-height:1.65; }
+.definition-text p { white-space:pre-wrap; }
+[role="alert"] { color:#a00; }
+.import-label { display:block; margin:20px 0; }
+@media(max-width:550px) { .dictionary-app { margin-top:16px; padding:0 12px 40px; } }
+
+.clauson-guide { display: block; width: 100%; height: clamp(420px, 76svh, 800px); border: 1px solid #ded6c5; border-radius: 4px; }
