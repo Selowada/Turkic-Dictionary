@@ -21,7 +21,3 @@ Use `**bold**` and `*italic*` in definition text. Paragraph breaks and historic 
 ## Validation
 
 `npm run build` and `npm test`.
-
-## GitHub Pages
-
-The [published dictionary](https://selowada.github.io/Turkic-Dictionary/) serves the root of the `gh-pages` branch. To update the site, run `npm run build` and update that branch with the contents of `dist/`, keeping `.nojekyll` in the published root.
